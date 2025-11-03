@@ -12,4 +12,11 @@ public class DataTypeExamples
 
     public bool BooleanValue;
 
+    // Collection of datatypes <--> data structures
+
+    // Array -- fixed size (defined by the elements it contains)
+    public string[]? ShoppingListAsArray;
+    // List -- dynamically sized (can grow or shrink as we see fit)
+    public List<string>? ShoppingListAsList;
+
 }

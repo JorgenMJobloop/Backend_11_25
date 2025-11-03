@@ -24,5 +24,27 @@ class Program
         examples.CharacterValue = a;
         Console.WriteLine(examples.CharacterValue + b);
         Console.WriteLine(examples.BooleanValue);
+
+        // Collections and data structure examples
+        // in this case, the variable holds a collection of string values, rather than a single value.
+        string[] elementsInArray = ["Milk", "Honey", "Coffee", "Soda", "Chicken", "Steak"]; // we have added values to our array, and can now loop through it
+        examples.ShoppingListAsArray = elementsInArray;
+
+        for (int i = 0; i < examples.ShoppingListAsArray.Length; i++)
+        {
+            Console.WriteLine($"Element at index: {i} in our array: {examples.ShoppingListAsArray[i]}\nValue of our iterator(i): {i}");
+        }
+
+        List<string> shoppingListItems = examples.ShoppingListAsArray.ToList(); // we copy our array to the list, and can then add more values to it.
+        examples.ShoppingListAsList = shoppingListItems;
+        examples.ShoppingListAsList.Add("Pulled pork"); // List<string> element[-1] --> last index in our collection [0..7] where 7 is the last entry
+        Console.WriteLine(examples.ShoppingListAsList.LastIndexOf("")); // should be 7
+        examples.ShoppingListAsList.Add("Candy");
+        examples.ShoppingListAsList.Add("Lemonade");
+
+        foreach (var element in examples.ShoppingListAsList)
+        {
+            Console.WriteLine(element);
+        }
     }
 }
