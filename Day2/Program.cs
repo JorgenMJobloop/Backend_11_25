@@ -9,11 +9,12 @@ class Program
         Calculator calculator = new Calculator();
         CLI cli = new CLI();
 
+
+
         while (true)
         {
             AnsiConsole.Clear();
             //AnsiConsole.Write(new FigletText("My Calculator CLI Application").LeftJustified().Color(Color.Aqua));
-
             AnsiConsole.Write(new Panel(new Markup("[bold green]Terminal calculator[/]")).Border(BoxBorder.Double).Header("[yellow]CLI Calculator[/]", Justify.Center).Padding(1, 1, 1, 1));
 
 
